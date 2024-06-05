@@ -1,0 +1,915 @@
+/* ++++++++++++++++++++++++++++Estilos generales ultimo formato ++++++++++++++++++++++++++*/
+main {
+    width: 100%;
+    align-items: center;
+}
+head {
+    width: 100%;
+    }
+body {
+    
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+
+    .hero {
+        width: 100%;
+    }
+    body {        
+        width: 100%;
+    }
+}
+/* +++++++++++++++++++++++++++Estilos para el encabezado+++++++++++++++++++++++++++++ */
+/*NAV CAMBIA DE COLOR CUANDO ESTA EN DIFERENTES PAGINAS */
+nav ul li.especialinicio a {
+    color: #f8f9fb; /* Cambia el color del texto a azul */
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    font-weight: bold; /* Peso de la fuente de los enlaces (ajusta según tu diseño) */
+    background-color: #01088c;
+}
+/*++++++++++++++++++++++++++++++++++++++++ CUERPO ++++++++++++++++++++++++++++++++++++++++++*/
+.hero {
+    background-image: url('imagenes/hero-background.jpg');
+    background-size: cover;
+    text-align: center;
+    color: #ffffff;
+    padding: 1px 0;
+    display: flex;
+    align-items: center; /* Para alinear verticalmente */
+    width: 100%;
+    height: 35em;
+    background-attachment: fixed; /* Fija la imagen de fondo */
+    background-position: center top; /* Ajusta la posición de la imagen de fondo */
+    transition: background-image 1s ease, background-position 1s ease; /* Transición suave para la imagen de fondo y su posición */
+    position: relative; /* Para que la máscara sea posicionada correctamente */
+}
+
+.hero::before {
+    content: ""; /* Agrega un pseudo-elemento para crear la máscara */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%, transparent 50%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.24) 100%); /* Degradado radial */
+    z-index: 1; /* Asegura que la máscara esté sobre la imagen de fondo */
+}
+.containercuerpo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5%;
+}
+.hero-content {
+    width: 75%; /* 75% del ancho */
+    margin-left: 9em; /* Centrar horizontalmente */
+    margin-right:11em; /* Centrar horizontalmente */
+    padding: 0px; /* Añade un espacio interior */
+    background-color: #0e2453c8; /* Color de fondo */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+.hero-text {
+    text-align: center; /* Alinear texto al centro */
+}
+.hero-text h2 {
+    font-size: 35px; /* Tamaño del texto del encabezado */
+    color: #ffffff; /* Color del texto del encabezado */
+    font-family: 'Playfair Display', serif; /* Fuente de Google Fonts */
+    
+}
+.hero-text p {
+    font-size: 18px; /* Tamaño del texto del párrafo */
+    color: #ffffff; /* Color del texto del párrafo */
+    line-height: 1.5; /* Altura de línea */
+    text-shadow: 2px 2px px rgba(0, 0, 0, 0.5);
+    margin-top: 20px; /* Espaciado superior */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.hero-text .menusabermas {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #035cbcba;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text .menusabermas:hover {
+    background-color: #0056b3;
+}
+
+.hero-text .menusabermas:active {
+    transform: translateY(3px);
+}
+/* FORMULARIO DE CORREO*/
+.contact-form {
+    width: 25%; /* 25% del ancho */
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    margin-right: 1em;
+}
+/* Agregar una clase adicional para controlar la opacidad */
+.hero.fade-out {
+    opacity: 0; /* Establecer la opacidad a 0 */
+}
+
+ 
+
+/* ++++++++++++++++++++++++++Estilos del formulario de contacto++++++++++++++++++ */
+.contact-form {
+    width: 30%; /* Ajusta según sea necesario */
+    background-color: rgba(0, 110, 255, 0.349);
+    padding: 20px 25px; /* Ajusta el espacio superior e inferior */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Para que los elementos se apilen verticalmente */
+    align-items: center; /* Para centrar horizontalmente */
+    justify-content: center; /* Para centrar verticalmente */
+    height: 425px;
+    margin-bottom: -4%; /* Reducir la distancia inferior */
+}
+
+.contact-form > div {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin: 10px 0; /* Ajusta el espacio vertical entre los elementos */
+}
+
+.contact-form form {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    
+}
+
+.contact-form form .form-group {
+    margin-bottom: 10px; /* Espacio entre grupos de formulario */
+    display: flex; /* Utiliza flexbox para alinear y centrar los elementos */
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+}
+
+.contact-form form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form form input[type="text"],
+.contact-form form input[type="email"],
+.contact-form form textarea {
+    width: calc(100% - 30px); /* Ancho completo menos el ancho de los bordes */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.contact-form form textarea {
+    height: 80px; /* Altura fija */
+    max-height: 80px; /* Altura máxima */
+    resize: vertical; /* Permitir cambio vertical */
+}
+
+#message {
+    font-style: italic; /* Estilo de fuente en cursiva */
+    line-height:1; /* Altura de línea */
+    height: 80em;
+    border: 1px solid #ccc; /* Borde del área de texto */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.contact-form form button {
+    display: block;
+    margin: 0 auto; /* Centra el botón horizontalmente */
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form form button:hover {
+    background-color: #555;
+    align-items: center; /* Para centrar horizontalmente */
+}
+
+.notification {
+    position: fixed;
+    top: 500px;
+    right: 100px;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Media query para pantallas de teléfono */
+@media screen and (max-width: 768px) {
+    .hero {
+        top: 50px;
+        height: auto; /* Reduce la altura del héroe al 50% del viewport height en pantallas de teléfono */
+        background-size: cover; /* Redimensiona la imagen de fondo al 60% del contenedor */
+        transition: background-size 0.5s ease; /* Agrega una transición suave para el tamaño de la imagen de fondo */
+    }
+    .hero-text h2 {
+        font-size: 25px; /* Tamaño del texto del encabezado */
+        color: #ffffff; /* Color del texto del encabezado */
+        font-family: 'Playfair Display', serif; /* Fuente de Google Fonts */
+        
+    }
+    .hero-text p {
+        font-size: 15px; /* Tamaño del texto del párrafo */
+        color: #ffffff; /* Color del texto del párrafo */
+        line-height: 1.5; /* Altura de línea */
+        text-shadow: 2px 2px px rgba(0, 0, 0, 0.5);
+        margin-top: 10px; /* Espaciado superior */
+        margin-bottom: 10px; /* Espaciado inferior */
+    }
+
+
+    .containercuerpo {
+        width: 100%;
+        flex-direction: column; /* Cambia la dirección del contenedor a columna */
+    }
+
+    .hero-content {
+        width: 80%; /* Ajusta el ancho al 80% para que ocupe todo el espacio disponible */
+        margin: 80px auto; /* Centra el contenido verticalmente */
+        flex-wrap: wrap; /* Agrega un margen inferior en pantallas de teléfono */
+    }
+    .contact-form {
+        display: none; /* Oculta el formulario en dispositivos móviles */
+    }
+
+    .notification {
+        display: none; /* Oculta la notificación en dispositivos móviles */
+    }
+
+
+
+
+    /*.contact-form {
+        width: 80%; /* Ajusta el ancho al 70% en pantallas de teléfono */
+       /* margin: 20px 5px 20px; /* Centra el formulario verticalmente y agrega márgenes superior e inferior */
+        /*padding: 5px; /* Agrega un relleno interno al formulario */
+        /*font-size: 14px;
+        
+    }
+    
+    .contact-form form .form-group {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .notification {
+        position: fixed;
+        top: 900px;
+        right: 290px;
+        background-color: #28a745;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: none;
+    }*/
+}
+
+.wrapper {
+    width: 100%;
+    margin-bottom: 4em;
+    overflow-x: scroll;
+    white-space: nowrap;
+    align-items: center;
+}
+.wrapper::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+    height: 8px; /* Altura de la barra de desplazamiento */
+}
+
+.wrapper::-webkit-scrollbar-track {
+    background-color: transparent; /* Color de fondo de la barra de desplazamiento */
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(6, 5, 8, 0.301); /* Color del 'thumb' (parte deslizable) de la barra de desplazamiento */
+    border: none; /* Borde del 'thumb' */
+    border-radius: 120px;
+    width: 4rem;
+}
+.imagen {
+    display: inline-block;
+    position: relative;
+    width: 25%; /* Ajusta el ancho según tus necesidades */
+    height: 110px; /* Altura deseada */
+    margin-right: -4em; /* Espacio entre las imágenes */
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+    overflow: hidden;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.imagen:hover img {
+    transform: scale(1.2); /* Escala aumentada al 120% */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.imagen:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3,
+.overlay p {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+  /* Evita que el último margen derecho sobresalga */
+.imagen:last-child {
+    margin-right: 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        margin-top: 55px;
+        width: 100%;
+        height: 150px;
+        margin-bottom: 1px; /* Reducir el margen inferior */
+        overflow-x: auto; /* Cambiar a desplazamiento automático en dispositivos móviles */
+        white-space: nowrap;
+        scrollbar-width: none; /* Ocultar la barra de desplazamiento en Firefox */
+        -ms-overflow-style: none; /* Ocultar la barra de desplazamiento en IE y Edge */
+    }
+    
+    .wrapper::-webkit-scrollbar {
+      display: none; /* Ocultar la barra de desplazamiento en WebKit */
+    }
+    
+    .imagen {
+      width: 50%; /* Ajustar el ancho de las imágenes en dispositivos móviles */
+      height: 150px; /* Ajustar la altura de las imágenes en dispositivos móviles */
+      margin-right: -2em; /* Reducir el espacio entre las imágenes */
+    }
+}
+
+/*++++++++++++++++++++recursos utiles de implementacion+++++++++++++++++++++++++++++++++++++++*/
+.recursos {
+    height: auto; /* Cambiado a automático para ajustarse al contenido */
+    width: 100%; /* Ancho del 90% del contenedor padre */
+    font-family: "Didot", serif; /* Tipo de fuente Didot */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar elementos horizontalmente */
+    margin-top: 5px; /* Espacio en la parte superior */
+    margin-bottom: 2px;
+    padding: 10px 90px 10px 90px; /* Ajuste del padding (15px izquierda y derecha, 10px arriba y abajo) */
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0)); /* Degradado transparente */
+    border-radius: 1px; /* Borde redondeado */
+    box-shadow: 0 0 40px rgba(12, 12, 12, 0.1); /* Sombra */
+}
+
+.titulo {
+    margin-bottom: 0px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-left: 3em;
+    max-width: 100%; /* Establecer un ancho máximo para evitar desbordamientos */
+    word-wrap: break-word; /* Permitir que las palabras se dividan en líneas si no caben en una sola línea */
+}
+
+/* Estilos de cada recurso */
+.recurso {
+    text-align: center; /* Alinear el contenido al centro */
+    margin: 0 10px 20px; /* Ajuste de margen */
+    width: 150px; /* Ancho de cada recurso */
+    flex-grow: 1; /* Permitir que los elementos se expandan */
+    position: relative; /* Posición relativa para sombra */
+}
+
+.recurso img {
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Altura de la imagen */
+    border-radius: 10%; /* Borde redondeado */
+    margin-bottom: 1px; /* Espacio entre la imagen y el párrafo */
+    transition: box-shadow 0.3s ease; /* Transición de la sombra */
+}
+
+/* Efecto de sombra al pasar el cursor sobre la imagen */
+.recurso:hover img {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.514); /* Sombras al deslizar el cursor */
+}
+
+.recurso p {
+    margin-top: 14px;
+    font-size: 1em;
+    transition: transform 0.3s ease; /* Transición de la animación */
+}
+
+/* Efecto de animación al pasar el cursor sobre el texto */
+.recurso:hover p {
+    transform: translateY(-7px); /* Mover texto hacia arriba al deslizar el cursor */
+}
+
+.texto {
+    text-align: center;    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+.texto p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.texto p + p {
+    display: inline;
+}
+
+.texto a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.texto a:hover {
+    text-decoration: underline;
+}
+
+.texto p:last-child {
+    margin-top: 10px; /* Ajusta el margen superior según tu preferencia */
+}
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    .recursos {
+        margin: 5px 5px; /* Ajusta el margen para adaptarse a pantallas más pequeñas */
+        align-items: center;
+        padding: 10px 10px 10px 10px; /* Ajuste del padding (15px izquierda y derecha, 10px arriba y abajo) */
+        }
+
+    .titulo {
+        font-size: 25px;
+        margin-left: 0; /* Elimina el margen a la izquierda */
+        text-align: center; /* Centra el título */
+        margin: 5%;
+    }
+
+    .recurso {
+        width: 50%; /* Ancho completo */
+        margin: 0 auto 20px; /* Centra horizontalmente y agrega espacio inferior */
+        flex-direction: row;
+    }
+
+    .recurso img {
+        width: 150px; /* Reduce el tamaño de la imagen */
+        height: 150PX; /* Reduce el tamaño de la imagen */
+    }
+    /* Efecto de sombra al pasar el cursor sobre la imagen */
+    .recurso:hover img {
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.514); /* Sombras al deslizar el cursor */
+    }
+
+    .recurso p {
+        font-size: 1em;
+        transition: transform 0.3s ease; /* Transición de la animación */
+    }
+
+    /* Efecto de animación al pasar el cursor sobre el texto */
+    .recurso:hover p {
+        transform: translateY(-7px); /* Mover texto hacia arriba al deslizar el cursor */
+    }
+}
+
+/*++++++++++++++++++++++++++++++SERVICIOS PARA TU EMPRESA++++++++++++++++++++++++++++++++++++*/
+.tools {
+        /* Propiedades del fondo */
+    background-image: url('imagenes/ultimo.svg');
+    background-size: cover;
+    position: relative;
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática */
+    padding: 21px; /* Sin relleno */
+    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Borde superior */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Borde inferior */
+}
+
+
+/* Estilos para los títulos */
+.tools h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.9em;
+    margin-left: 3em;
+    max-width: 100%; /* Establecer un ancho máximo para evitar desbordamientos */
+    word-wrap: break-word; /* Permitir que las palabras se dividan en líneas si no caben en una sola línea */
+}
+.texto1 {
+    
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    margin-bottom: 10px; /* Espacio adicional entre bloques de texto */
+}
+
+.texto1 p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #333333;
+    white-space: nowrap; /* Evita que el texto se envuelva a la siguiente línea */
+}
+
+.texto1 a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.texto1 a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para las columnas */
+.tools .recursoss {
+    display: flex; /* Mostrar como flexbox */
+    flex-wrap: wrap; /* Envolver elementos en varias líneas */
+    justify-content: space-aroundn; /* Justificar espacio entre columnas */
+    gap: 10px; /* Espacio entre columnas */
+    
+}   
+
+/* Estilos para la sección de herramientas */
+.tools {
+    text-align: center; /* Alinear texto al centro */
+    margin-top: 25px;
+}
+
+/* Estilos para los recursos */
+.recursoss {
+    display: flex; /* Mostrar como flexbox */
+    flex-wrap: wrap; /* Envolver elementos en varias líneas */
+    justify-content: space-around; /* Justificar espacio entre columnas */
+    gap: 10px; /* Espacio entre columnas */
+    padding: 10px 100px 10px 100px; /* Ajuste del padding (15px izquierda y derecha, 10px arriba y abajo) */
+}
+
+/* Estilos para cada columna */
+.tool-column {
+    width: 200px; /* Ancho de la columna */
+    background-color: #ffffff; /* Color de fondo */
+    padding: 2px; /* Relleno interno */
+    text-align: center; /* Alineación del texto */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 0 40px 0 40px; /* Borde redondeado */
+    box-shadow: 0 20px 20px rgba(0, 1, 1, 1); /* Sombra */
+    margin-bottom: 40px; /* Espacio inferior para separar las columnas */
+    transition: transform 0.3s ease; /* Transición suave en la transformación */
+}
+
+/* Estilos para las imágenes dentro de las columnas */
+.tool-column .imagenes {
+    height: 69%; /* Altura fija para las imágenes */
+}
+
+.tool-column img {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    border-radius: 0 40px 0 40px; /* Borde redondeado */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Añadir transición a transform, sombra y filtro */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.tool-column img:hover {
+    transform: scale(0.95); /* Aplicar un aumento del 5% al tamaño */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Aumentar la sombra en el estado de hover */
+    filter: brightness(80%); /* Aumentar el brillo en el estado de hover */
+}
+
+/* Cambio de color y elevación al pasar el cursor sobre la columna */
+.tool-column:hover {
+    transform: translateY(-5px); /* Transformación al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra al pasar el cursor */
+}
+
+/* Estilos para el título dentro de la columna */
+.tool-column .caja h3 {
+    margin-top: 10px; /* Espacio superior */
+    margin-bottom: 5px; /* Espacio inferior */
+    font-size: 1em; /* Tamaño de fuente */
+}
+/* Cambio de color y elevación al pasar el cursor sobre la columna */
+.tool-column:hover {
+    transform: translateY(-5px); /* Transformación al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra al pasar el cursor */
+}
+
+
+/* Media query para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    /* Estilos para dispositivos pequeños */
+    .tools {
+        padding: 0PX; /* Ajuste del relleno */
+    }
+
+    .tools h2 {
+        
+        font-size: 16px; /* Tamaño de fuente del título */
+        text-align: center; /* Centrar el texto en dispositivos móviles */
+        font-size: 1.5em; /* Reducir el tamaño del texto en dispositivos móviles */
+    }
+    .texto1 {
+        text-align: center;
+        padding: 1px; /* Ajuste del relleno para dispositivos móviles */
+        border-radius: 0; /* Eliminar el radio del borde en dispositivos móviles */
+        box-shadow: none; /* Eliminar la sombra en dispositivos móviles */
+        margin-bottom: 10px; /* Ajuste del margen inferior para dispositivos móviles */
+    }
+
+    .texto1 p {
+        width: 150px;
+        text-align: center;
+        font-size: 13px; /* Reducción del tamaño de fuente para dispositivos móviles */
+    }
+
+    .texto1 a {
+        width: 150px;
+        text-align: center;
+        word-wrap: normal;
+        font-size: 12px; /* Reducción del tamaño de fuente para dispositivos móviles */
+    }
+
+    .tools p {
+        font-size: 12px; /* Tamaño de fuente del párrafo */
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    .recursoss {
+        gap: 5px; /* Espacio entre columnas */
+        padding: 19px 
+    }
+
+    .tool-column {
+        width: 180px;
+        height: 200px;
+        padding: none;
+    }
+
+    .tool-column .imagenes {
+        height: 70%;
+        width: 100%; /* Altura fija para las imágenes */
+    }
+
+    .tool-column img {
+        height: 100%; /* Altura completa */
+    }
+
+    .tool-column .caja h3 {
+        font-size: 15px; /* Tamaño de fuente del título dentro de la columna */
+        margin-top: 1px;
+    }
+}
+
+/*++++++++++++++++++++++++++++++Eventos  próximos+++++++++++++++++++++++++++++++++++++++*/
+.eventos {
+    width: 80%; /* Anchura del contenedor */
+    height: auto; /* Altura automática */
+    background-color: #ffffff88; /* Color de fondo con opacidad */
+    margin: 20px auto; /* Margen superior 50px y laterales automáticos */
+}
+.titulo h2 { 
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1em; /* Tamaño de fuente */
+    justify-content: left; /* Alinea el contenido a la izquierda */
+}
+.titulo p { /* Selector corregido para los elementos p dentro de .titulo */
+    font-size: 0.7em; /* Tamaño de fuente */
+    margin: 0; /* Elimina el margen horizontal */
+    font-weight: normal; /* Quita la negrita */
+}
+.contenido-eventos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex;
+    height: 20%; /* Altura del contenedor */
+}
+
+.contenido-eventos .evento {
+    flex: 1; /* Flex-grow, flex-shrink, flex-basis */
+    margin: auto; /* Margen automático para centrar horizontalmente */
+}
+.eventos .evento {
+    background-image: url('Imagenes/su-imagen.jpg');
+    background-size: 100%; /* Reducir la escala de la imagen al 50% */
+    width: 300px;
+    margin: 0 20px 20px 0;
+    padding: 20px;
+    border-radius : 80px solid #ccc;
+}
+.eventos .evento h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+.eventos .evento p {
+    margin-bottom: 10px;
+}
+.eventos .evento a {
+    display: block;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.eventos .evento a:hover {
+    background-color: #0056b3;
+}
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+
+/*++++++++++++++++++++++++++CLIENTES SATISFECHOS++++++++++++++++++++++++++++++++++++++++++ */
+.clients {
+    background-color: #fcfcfc;
+    padding: 10px 0;
+}
+.clientetitulo {
+    text-align: center;
+    margin-bottom: 23px;
+}
+
+/* Estilo del contenedor de testimonios */
+.client-testimonials {
+    display: flex;
+    gap: 20px; /* Espacio entre testimonios */
+    overflow-x: auto; /* Hace que la barra de desplazamiento aparezca automáticamente cuando el contenido se desborda */
+    scroll-snap-type: x mandatory; /* Hace que el desplazamiento se detenga en cada testimonio */
+    padding: 16px; /* Añade un poco de espacio para la barra de desplazamiento */
+    -webkit-overflow-scrolling: touch; /* Hace que el desplazamiento sea suave en dispositivos iOS */
+    position: relative; /* Añadir posición relativa */
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0)); /* Degradado blanco en los lados */
+    transition: background-color 0.3s; /* Transición al pasar el cursor */
+}
+
+/* Estilo de la barra de desplazamiento */
+.client-testimonials::-webkit-scrollbar {
+    width: 20px; /* Ancho de la barra de desplazamiento */ 
+    height: 0.9em; 
+}
+
+.client-testimonials::-webkit-scrollbar-thumb {
+    background-color: #999; /* Color del botón de la barra de desplazamiento */
+    border-radius: 15px; /* Añadir radios a las esquinas del botón */
+}
+
+.client-testimonials::-webkit-scrollbar-thumb:hover {
+    background-color: #5259d4; /* Color del botón de la barra de desplazamiento al pasar el cursor */
+    cursor: pointer;
+}
+
+/* Estilo de cada testimonio individual */
+.client-testimonial {
+    min-width: 260px; /* Ancho mínimo de cada testimonio */
+    height: 22em;
+    background-color: #eceef2bc;
+    border-radius: 10px;
+    padding: 8px;
+    scroll-snap-align: start; /* Hace que cada testimonio esté alineado con el borde del contenedor de testimonios */
+    animation: fadeIn 1s ease-in-out; /* Animación de fade-in */
+}
+
+/* Estilo del título del testimonio */
+.client-testimonial h3 {
+    margin-bottom: 2em;
+    font-size: 18px; /* Tamaño de fuente reducido a 12px */
+    font-weight: bold; /* Texto en negrita */
+    font-family: Arial, sans-serif; /* Cambio de fuente de letra */
+    color: #333;
+    text-align: center; /* Justificar el texto */    
+}
+
+/* Estilo del texto del testimonio */
+.client-testimonial p  {
+    font-size: 10px;
+    margin: 0;
+    font-size: 17px; /* Tamaño de fuente reducido a 14px */
+    color: #333;
+    text-align: center; /* Justificar el texto */
+}
+
+/* Estilo del título del testimonio */
+.client-testimonial h3 {
+    position: relative; /* Agregar posición relativa para posicionar las estrellas */
+}
+
+/* Estilo de las estrellas */
+.client-testimonial h3::after {
+    content: " ⭐⭐⭐⭐⭐"; /* Agregar estrellas al final del título */
+    font-size: 14px;
+    position: absolute;
+    bottom: -3.5em; /* Posicionar las estrellas debajo del título */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translateX(-50%); /* Alinear el centro de las estrellas con el centro del título */
+    margin-bottom: 30px; /* Agregar espacio inferior */
+}
+
+/* Estilo del último párrafo de cada testimonio */
+.client-testimonial p:last-child {
+    font-style: italic; /* Cambiar el estilo del último párrafo a cursiva */
+    color: #080606; /* Cambiar el color del texto */
+    margin-top: 8px; /* Agregar espacio superior */
+    font-family: Arial, sans-serif; /* Cambio de fuente de letra */
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50spx);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Estilos para dispositivos con ancho máximo de 768px */
+
+    .clients {
+        padding: 20px; /* Ajuste del padding */
+    }
+
+    .clientetitulo {
+        text-align: center;
+        margin-bottom: 23px;
+    }
+
+    .client-testimonials {
+        overflow-x: auto; /* Hace que la barra de desplazamiento aparezca automáticamente cuando el contenido se desborda */
+        scroll-snap-type: x mandatory; /* Hace que el desplazamiento se detenga en cada testimonio */
+        padding: 10px 8px; /* Ajuste del padding */
+    }
+
+    .client-testimonials::-webkit-scrollbar {
+        width: 10px; /* Ancho de la barra de desplazamiento */ 
+        height: 10px; /* Altura de la barra de desplazamiento */ 
+    }
+
+    .client-testimonial {
+        min-width: 200px; /* Ancho mínimo de cada testimonio */
+        height: auto; /* Altura automática */
+        margin-right: 10px; /* Margen derecho */
+        margin-bottom: 20px; /* Margen inferior */
+        padding: 12px; /* Ajuste del padding */
+    }
+
+    .client-testimonial h3 {
+        font-size: 16px; /* Tamaño de fuente reducido */
+    }
+
+    .client-testimonial p {
+        font-size: 14px; /* Tamaño de fuente reducido */
+    }
+
+    .client-testimonial h3::after {
+        bottom: -2em; /* Posición de las estrellas */
+        font-size: 12px; /* Tamaño de fuente reducido */
+    }
+}

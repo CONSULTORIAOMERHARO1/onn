@@ -1,0 +1,237 @@
+/* +++++++++++++++++++++++++++Estilos para el encabezado+++++++++++++++++++++++++++++ */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+    background-color: #00010317; /* Color de fondo oscuro */
+    background-image: linear-gradient(to bottom, rgb(13, 13, 13), rgba(0, 0, 0, 0.621), rgba(0, 0, 0, 0.385), rgba(0, 0, 0, 0.21), rgba(0, 0, 0, 0)); /* Degradado de oscuro a transparente */
+    height: 55px;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+}
+.logo {
+    height: 20%;
+    width: 35%;
+    transition: transform 1s ease; /* Agregar una transición suave para el giro */
+}
+
+.logo:hover {
+    transform: rotate3d(0, 50, 0, 360deg); /* Girar 360 grados en un espacio tridimensional alrededor del vector (1, 1, 1) */
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    
+}
+nav ul li{
+    margin: 0 5px;
+    display: inline; /* Asegura que los elementos de la lista estén en línea */
+}
+nav ul li a{
+    width: 80px;
+    color: #fffffffc;
+    font-size: 12px;
+    padding: 13px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    
+}
+
+
+
+/* Cambiar el color del fondo y el movimiento de las letras al pasar el cursor sobre los enlaces del menú */
+nav ul li a:hover {
+    background-color: #0000f7;
+    transform: rotate(360deg); /* Agrega aquí la transformación que desees */
+    
+    
+}
+
+li a.active, li a:hover{
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    margin-left: 10%;
+}
+#check{
+    display: none;
+}
+
+#check:checked + .checkbtn {
+    color: #f70000; /* Cambia el color de fondo cuando el checkbox está marcado */
+    
+}
+
+
+
+.develop {
+    position: relative;
+    padding: 0px 0px 0px 0px ; /* espaciado interno */
+}
+
+.develop:hover .ul-second {
+    display: block;
+}
+
+.ul-second {
+    display: none;
+    position: absolute;
+    margin-top: 0vw;
+    width: 320px; /* ajusta el ancho según sea necesario */
+    height: 200px;
+    background-color: #000000a4; /* color de fondo */
+    border-radius: 1px; /* bordes redondeados */
+    padding: 3px; /* espacio interno */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* sombra */
+    z-index: 100; /* asegura que esté por encima de otros elementos */
+}
+
+.ul-second > li { /* Cambia el display de los elementos <li> a inline-block */
+    width: 100%; /* ancho completo */
+    height: 200%;
+    text-align: left;
+    padding: 2px 2px 2px 2px ; /* espaciado interno */
+    border-bottom: 1px solid #000000; /* línea de separación */
+    margin-top: 0em;
+    font-size: 28px;
+}
+
+.ul-second > li:last-child {
+    border-bottom: none; /* eliminar la línea de separación del último elemento */
+}
+
+.ul-second > li:hover {
+    background-color: #0d0b61; /* color de fondo al hacer hover */
+}
+
+
+
+.nav-links > .develop .ul-second {
+    top: calc(100% + 10px); /* posición debajo del elemento padre */
+    left: 0.1px; /* alineación a la izquierda */
+}
+
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .develop:hover .ul-second {
+        display: none; /* Ocultar el menú desplegable en dispositivos móviles */
+    }
+}
+
+
+
+/* MEDIAS QUERIES */
+@media (max-width: 952px){
+    .logo{
+        height: 100%;
+        width: 100%;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1110px){
+    .checkbtn{
+        display: flex;
+        margin-right: 2em;
+    }
+    nav{
+        padding: 0 30px;
+    }
+    .logo{
+        height: 45%;
+        width: 45%;
+    }
+    
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 100px);
+        background: #274eb7;
+        top: 54px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        z-index: 10;
+    }
+    nav ul li{
+        margin: 20px 0;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        //background: #000090;
+        //color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+    
+}
+
+@media (max-width: 858px){
+    nav {
+        background: #2359a5f8; /* Color de fondo sólido en dispositivos móviles */
+        background-image: none; /* Eliminar la imagen de fondo */
+        height: 95px; /* Establecer la altura deseada en dispositivos móviles */
+        padding: 20px;
+    }
+
+    .checkbtn{
+        display: flex;
+    }
+    nav{
+        padding: 0 30px;
+    }
+    .logo{
+        height: 100%;
+        width: 100%;
+    }
+    
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 100px);
+        background: #080d1b;
+        top: 95px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        z-index: 10;
+    }
+    nav ul li{
+        margin: 20px 0;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        //background: #000090;
+        //color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+    
+}

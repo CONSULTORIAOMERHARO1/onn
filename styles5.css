@@ -1,0 +1,248 @@
+/* ++++++++++++++++++++++++++++Estilos generales ultimo formato ++++++++++++++++++++++++++*/
+head {
+    width: 100%;
+    }
+body {
+    
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+
+    .hero {
+        width: 100%;
+    }
+    body {        
+        width: 100%;
+    }
+}
+/* +++++++++++++++++++++++++++Estilos para el encabezado+++++++++++++++++++++++++++++ */
+/*NAV CAMBIA DE COLOR CUANDO ESTA EN DIFERENTES PAGINAS */
+nav ul li.especialrecursos a {        
+    color: #f8f9fb; /* Cambia el color del texto a azul */
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    font-weight: bold; /* Peso de la fuente de los enlaces (ajusta según tu diseño) */
+    background-color: #01088c;
+}
+/*++++++++++++++++++++++++++++++++++++++++ CUERPO ++++++++++++++++++++++++++++++++++++++++++*/
+#titulo {
+    background-image: url(./imagenes/RECURSOS.png);
+    background-size: cover; /* Cambiado a cover para cubrir completamente el elemento */
+    background-position: center 90%;
+    color: rgb(13, 11, 11);
+    text-align: right;
+    padding: 20px;
+    margin-top: 0px;
+    height: 550px;
+    
+}
+
+#titulo {
+    transition: background-image 3s ease; /* Agregar una transición suave */
+}
+
+.fade-out {
+    opacity: 0; /* Hacer que la imagen actual se desvanezca */
+}
+
+
+
+.container {
+    margin-top: 20Px;
+    margin-left: auto; /* Cambiado a auto para centrar el contenedor horizontalmente */
+    margin-right: auto; /* Añadido para centrar el contenedor horizontalmente */
+    padding: 50px 0px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Cambiado a flex-end para alinear los elementos a la derecha */
+}
+
+.item {
+    max-width: 480px; /* Cambiado a max-width para mantener el ancho máximo */
+}
+
+.item h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.item p {
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.imagen {
+    margin-bottom: 20px;
+}
+
+.boton {
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px ;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.boton:hover {
+    background-color: rgb(0, 60, 255);
+    color: white;
+}
+
+.boton:hover::after {
+    content: "¡Logremos grandes cosas!";
+}
+
+h1:hover,
+h3:hover,
+p:hover {
+    transform: translateX(8px); /* Consolidado el estilo para los elementos al pasar el cursor */
+    transition: transform 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    #titulo {
+        padding: 10px;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .container {
+        margin-top: 100px;
+        margin-left: 0; /* Cambiado a 0 para alinear el contenedor completamente a la derecha */
+        margin-right: 0;
+        padding: 10px;
+        align-items: flex-end; /* Cambiado a flex-end para alinear los elementos a la derecha */
+        text-align: right;
+    }
+
+    .item {
+        width: 60%;
+        max-width: none; /* Restablecido a none para permitir el ancho completo */
+        margin-right: -5em;
+    }
+
+    .item h1 {
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+
+    .item p {
+        background-color: #ffffff;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+    }
+
+    .boton {
+        padding: 8px 16px;
+    }
+}
+/*+++++++++++++++++cuerpo 2++++++*/
+
+/*++++++++++++++++++++recursos utiles de implementacion+++++++++++++++++++++++++++++++++++++++*/
+.recursos {
+    height: auto; /* Cambiado a automático para ajustarse al contenido */
+    width: 90%; /* Ancho del 90% del contenedor padre */
+    font-family: "Didot", serif; /* Tipo de fuente Didot */
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar elementos horizontalmente */
+    margin-top: 40px; /* Espacio en la parte superior */
+    margin-bottom: 40px;
+    padding: 20px; /* Espacio interno */
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0)); /* Degradado transparente */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 40px rgba(12, 12, 12, 0.1); /* Sombra */
+}
+
+.titulo {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left; /* Alinear texto al centro */
+    font-weight: bold; /* Hacer el título en negrita */
+    font-size: 1.5em; /* Tamaño de fuente más grande */
+    margin-left: 3em; /* Margen a la izquierda */
+}
+
+/* Estilos de cada recurso */
+.recurso {
+    text-align: center; /* Alinear el contenido al centro */
+    margin: 0 10px 20px; /* Ajuste de margen */
+    width: 150px; /* Ancho de cada recurso */
+    flex-grow: 1; /* Permitir que los elementos se expandan */
+    position: relative; /* Posición relativa para sombra */
+}
+
+.recurso img {
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Altura de la imagen */
+    border-radius: 50%; /* Borde redondeado */
+    margin-bottom: 1px; /* Espacio entre la imagen y el párrafo */
+    transition: box-shadow 0.3s ease; /* Transición de la sombra */
+}
+
+/* Efecto de sombra al pasar el cursor sobre la imagen */
+.recurso:hover img {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.514); /* Sombras al deslizar el cursor */
+}
+
+.recurso p {
+    font-size: 1em;
+    transition: transform 0.3s ease; /* Transición de la animación */
+}
+
+/* Efecto de animación al pasar el cursor sobre el texto */
+.recurso:hover p {
+    transform: translateY(-7px); /* Mover texto hacia arriba al deslizar el cursor */
+}
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    .recursos {
+        margin: 3px 10px; /* Ajusta el margen para adaptarse a pantallas más pequeñas */
+    }
+
+    .titulo {
+        font-size: 2em;
+        margin-left: 0; /* Elimina el margen a la izquierda */
+        text-align: center; /* Centra el título */
+        margin: 10%;
+    }
+
+    .recurso {
+        width: 100%; /* Ancho completo */
+        margin: 0 auto 20px; /* Centra horizontalmente y agrega espacio inferior */
+    }
+
+    .recurso img {
+        width: 35%; /* Reduce el tamaño de la imagen */
+        height: 75%; /* Reduce el tamaño de la imagen */
+    }
+    /* Efecto de sombra al pasar el cursor sobre la imagen */
+    .recurso:hover img {
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.514); /* Sombras al deslizar el cursor */
+    }
+
+    .recurso p {
+        font-size: 1em;
+        transition: transform 0.3s ease; /* Transición de la animación */
+    }
+
+    /* Efecto de animación al pasar el cursor sobre el texto */
+    .recurso:hover p {
+        transform: translateY(-7px); /* Mover texto hacia arriba al deslizar el cursor */
+    }
+}
+

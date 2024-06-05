@@ -1,0 +1,779 @@
+/* ++++++++++++++++++++++++++++Estilos generales ultimo formato ++++++++++++++++++++++++++*/
+head {
+    width: 100%;
+    }
+body {
+    
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+
+    .hero {
+        width: 100%;
+    }
+    body {        
+        width: 100%;
+    }
+}
+
+/* +++++++++++++++++++++++++++Estilos para el encabezado+++++++++++++++++++++++++++++ */
+/*NAV CAMBIA DE COLOR CUANDO ESTA EN DIFERENTES PAGINAS */
+nav ul li.especialnosotros a {
+        color: #f8f9fb; /* Cambia el color del texto a azul */
+        text-decoration: none; /* Elimina el subrayado predeterminado */
+        font-weight: bold; /* Peso de la fuente de los enlaces (ajusta según tu diseño) */
+        background-color: #01088c;
+}
+
+/*++++++++++++++++++++++++++++++++++++++++ perfil de consulrotia ++++++++++++++++++++++++++++++++++++++++++*/
+#titulo {
+    background-image: url(./imagenes/1b.png);
+    background-size: 100%; /* La imagen defondo cubrirá todo el elemento */
+    background-position: center; /* La imagen se centrará en el elemento */
+    color: rgb(13, 11, 11);
+    text-align: left;
+    padding: 20px;
+    margin-top: 0px;
+    height: 550px;
+}
+.container {
+    margin-top: 100px;
+    margin-left: 50px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Alinea el contenido horizontalmente */
+    
+    }
+.item {width: 650px;
+}
+
+.item h1 {
+    font-size: 40px; /* Disminuí el tamaño para que se ajuste mejor */
+    margin-bottom: 10px;
+}
+
+.item p {
+    font-size: 16px; /* Aumenté el tamaño para una mejor legibilidad */
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.imagen {    
+    margin-bottom: 20px;
+}
+
+.boton {
+    background-color: yellow;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para cambios de color */
+}
+
+/* Estilos para el botón al pasar el cursor */
+.boton:hover {
+    background-color: rgb(0, 60, 255); /* Cambia el color de fondo al pasar el cursor */
+    color: white; /* Cambia el color del texto al pasar el cursor */
+}
+
+/* Estilos para el texto del botón */
+.boton:hover::after {
+    content: ".   .  ¡Logremos grandes cosas!"; /* Cambia el texto al pasar el cursor */
+}
+
+/* Estilos para el título h1 al pasar el cursor */
+h1:hover {
+    transform: translateX(9px); /* Mueve el título hacia la derecha al pasar el cursor */
+    transition: transform 0.3s; /* Transición suave para el movimiento */
+}
+
+h3:hover {
+    transform: translateX(8px); /* Mueve el título hacia la derecha al pasar el cursor */
+    transition: transform 0.3s; /* Transición suave para el movimiento */
+}
+p:hover {
+    transform: translateX(8px); /* Mueve el título hacia la derecha al pasar el cursor */
+    transition: transform 0.3s; /* Transición suave para el movimiento */
+}
+
+
+@media screen and (max-width: 768px) {
+    #titulo {
+        background-image: url(./imagenes/1b.png);
+        background-size: cover; /* La imagen de fondo cubrirá todo el elemento */
+        background-position: right; /* La imagen se centrará en el elemento */
+        color: rgb(13, 11, 11);
+        text-align: center;
+        padding: 20px;
+        margin-top: 0px;
+        height: auto; /* Altura automática para adaptarse al contenido */
+    }
+
+    .container {
+        margin-top: 100px;
+        margin-left: 0px; /* Reducir el margen izquierdo */
+        padding: 20px; /* Reducir el espacio de relleno */
+        display: flex;
+        flex-direction: column;
+        align-items: left; /* Alinea el contenido horizontalmente */
+    }
+
+    .item {
+        width: 75%; /* Ancho completo */
+    }
+
+    .item h1 {
+        font-size: 30px; /* Reducir tamaño para que se ajuste mejor */
+        margin-bottom: 5px;
+    }
+
+    .item p {
+        background-color: #ffffff;
+        font-size: 14px; /* Aumentar el tamaño para una mejor legibilidad */
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+    }
+
+    .imagen {
+        margin-bottom: 20px;
+    }
+
+    .boton {
+        background-color: yellow;
+        color: black;
+        padding: 8px 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s; /* Transición suave para cambios de color */
+    }
+
+    /* Estilos para el botón al pasar el cursor */
+    .boton:hover {
+        background-color: rgb(0, 60, 255);
+        color: white;
+    }
+
+    /* Estilos para el texto del botón al pasar el cursor */
+    .boton:hover::after {
+        content: " ¡Logremos grandes cosas!"; /* Cambia el texto al pasar el cursor */
+    }
+
+    /* Estilos para el título, subtítulos y párrafos al pasar el cursor */
+    
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++ mision y vision ++++++++++++++++++++++++++++++++++++++++++*/
+/* Estilos generales para la sección Misión y Visión */
+#caja {
+    background-image: url(./nosotros/N2.png);
+    background-size: 100%; /* La imagen de fondo cubrirá todo el elemento */
+    background-position: center;
+    height: 550px;
+}
+
+#mision-vision {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: flex-end; /* Alinea los elementos a la derecha */
+    margin-top: 0.5%;
+    margin-left: 13%;
+    margin-right: 18%;
+}
+.mision,
+.vision {
+    flex-basis: calc(50% - 50px); /* 50% del ancho menos el espacio entre las columnas */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10 10 10px rgba(0, 0,0,0);
+    background-color: #d33e3e;
+    transition: all 0.3s ease; /* Animación de transición */
+    margin-bottom: 10px;
+    width: 600px;
+    gap: 24px;
+    margin-top: 100px;
+}
+
+.mision:hover,
+.vision:hover {
+    transform: translateY(-5px); /* Movimiento hacia arriba al pasar el cursor */
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Estilos específicos para la Misión */
+.mision {
+    background: linear-gradient(45deg, #eaeded, #ffffffec); /* Fondo degradado */
+    box-shadow: 14px 5px 14px rgb(17, 14, 14); /* Sombra */
+}
+
+.vision {
+    background: linear-gradient(45deg, #ffffff, #e7e9e9); /* Fondo degradado */
+    color: #040101; /* Color de texto blanco */
+    box-shadow: 14px 5px 14px rgb(17, 14, 14); /* Sombra */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    #caja {
+        background-image: url(./nosotros/N2.png);
+        background-size: 150%; /* La imagen de fondo cubrirá todo el elemento */
+        background-position: right;
+        height: auto;
+        
+    }
+    .mision,
+    .vision {
+        width: 100%; /* Cambia el ancho para ocupar toda la fila */
+        flex-basis: unset; /* Elimina el valor de flex-basis */
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
+/*+++++++++++++++++++++++++++++valores++++++*/
+
+/* Estilo general del contenedor */
+.container_valores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 380px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  .titulovalores h2 {
+    font-size: 35px; /* Tamaño del texto en escritorio */
+    
+    margin: 0; /* Eliminar márgenes predeterminados */
+    text-shadow: 10px 9px 9px rgba(6, 11, 106, 0.495); /* Sombra sutil */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.titulovalores h2:hover {
+    color: #010922; /* Cambiar el color del texto al pasar el cursor */
+    text-shadow: 2px 2px 4px rgba(1, 1, 8, 0.6); /* Añadir una sombra más pronunciada */
+}
+  /* Estilo del contenido de valores */
+  .contenido-valores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .contenido-valores > * {
+    margin: 35px; /* ajusta el valor según necesites */
+  }
+  /* Estilo de cada valor */
+  /* Estilo de cada valor */
+/* Estilo de cada valor */
+
+.valor {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
+    height: 150px;
+    box-shadow: 3px 10px 10px 10px rgb(2, 10, 162); /* Agregado */
+  }
+  
+  .valor:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Modificado */
+  }
+  
+  /* Estilo para el título de valor */
+  .titulo-valor {
+    position: absolute;
+    top: 0;
+    
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Estilo para el texto de valor */
+  .texto-valor {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 0PX;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1f7;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+  
+  /* Estilo para el título de valor al pasar el cursor */
+  .valor:hover .titulo-valor {
+    transform: translateY(-50%);
+  }
+  
+  /* Estilo para el texto de valor al pasar el cursor */
+  .valor:hover .texto-valor {
+    transform: translateY(50%);
+  }
+  
+  /* Estilo para el título de valor */
+  .titulo-valor h3 {
+    font-size: 18px;
+  }
+  
+  /* Estilo para el texto de valor */
+  .texto-valor p {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+  }
+
+
+/* Media Query para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    /* Estilo de cada valor en dispositivos móviles */
+    .container_valores {
+        width: 100%;
+        max-width: 600px; /* Modificado */
+        margin: 0 auto;
+        padding: 20px;
+        height: 1000px;
+      }
+    .valor {
+      width: calc(100% - 00px); /* El ancho será el 100% del contenedor menos el padding */
+      margin-top: 20px; /* Reduce el espacio superior */
+      margin-bottom: 10px; /* Reduce el espacio inferior */
+      height: auto; /* Ajusta la altura automáticamente */
+      cursor: pointer; /* Restaura el cursor predeterminado */
+      box-shadow: none; /* Elimina la sombra */
+    }
+  
+    /* Estilo para el título de valor en dispositivos móviles */
+    .titulo-valor {
+      position: static; /* Restaura la posición predeterminada */
+      width: auto; /* Ajusta el ancho automáticamente */
+      height: auto; /* Ajusta la altura automáticamente */
+      background-color: transparent; /* Elimina el color de fondo */
+      border-radius: 0; /* Elimina el borde redondeado */
+      transform: none; /* Restaura la posición predeterminada */
+      transition: none; /* Elimina la transición */
+    }
+  
+    /* Estilo para el texto de valor en dispositivos móviles */
+    .texto-valor {
+      position: static; /* Restaura la posición predeterminada */
+      width: auto; /* Ajusta el ancho automáticamente */
+      height: auto; /* Ajusta la altura automáticamente */
+      background-color: transparent; /* Elimina el color de fondo */
+      border-radius: 0; /* Elimina el borde redondeado */
+      transform: none; /* Restaura la posición predeterminada */
+      transition: none; /* Elimina la transición */
+    }
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*++++++++++++++++++++METODOLOGIAS+++++++++++++++*/
+
+#frase {
+    text-align: center;
+    padding: 25px;
+    margin-top: 0em;
+    margin-bottom: -5em;
+}
+
+#frase h2 {
+    font-size: 25px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 1em;
+    margin-bottom: 0.9em;
+}
+#frase h1 {
+    font-size: 19px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-top: -1em;
+    margin-bottom: 0.1em;
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 850px) {
+    #frase {
+        padding: 15px;
+        margin-bottom: 1em;
+    }
+
+    #frase h1 {
+        font-size: 17px;
+        margin-top: -0.5em;
+    }
+}
+
+
+
+/* Media query para pantallas pequeñas */
+/* Media query para pantallas más pequeñas */
+
+
+#metodo {    
+    margin: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 80%;
+    height: auto;
+}
+
+/*+++++++++++++++++++++++++++++++fases++++++++++++++++++++*/
+#fases-container {
+    display: flex;    
+    flex-wrap: wrap; /* Envolver elementos en varias líneas */
+    justify-content: space-betweens; /* Distribuir espacio alrededor de las columnas */
+    margin: 5% 8% 5% 8%;
+    gap: 1px;
+}
+.fases {
+    background-color: rgb(229, 231, 235);
+    flex:auto; /* Permite que los elementos tengan su ancho intrínseco */
+    width: 11em; /* Ancho mínimo para cada bloque */
+    text-align: justify;
+    padding: 0.5em;
+    margin: 1em;
+    position: relative;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    border-radius: 0px 60px 0px 50px;
+}
+.fases h2 {
+    font-size: 32px;
+    margin-top: 0.5em;
+    margin-bottom: 0.1em;
+    text-align: center;
+    
+}
+
+.fases h3 {
+    font-size: 17px;
+    text-align: center;
+    }
+
+.fases p {
+    font-size: 15px;
+    position: absolute; /* Posiciona absolutamente el párrafo */
+    bottom: 0; /* Lo posiciona en la parte inferior del bloque */
+    left: 0; /* Lo posiciona en el borde izquierdo del bloque */
+    right: 0; /* Lo posiciona en el borde derecho del bloque */
+    padding: 2em; /* Añade relleno para que sea más legible */
+    background-color: white; /* Fondo blanco para el cuadro de texto */
+    margin: 0; /* Elimina los márgenes */
+    opacity: 0; /* Inicialmente oculta el párrafo */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Añade transiciones suaves para la opacidad y la transformación */
+    transform: translateY(100%); /* Inicialmente mueve el párrafo hacia abajo fuera del contenedor */
+}
+
+.fases:hover p {
+    opacity: 1; /* Muestra el párrafo al pasar el cursor sobre el bloque */
+    transform: translateY(0); /* Mueve el párrafo hacia arriba para que aparezca */
+    
+}
+
+/* Estilo para las imágenes dentro de .fases */
+.fases img {
+    width: 100%; /* Ajusta la imagen para que ocupe todo el ancho del contenedor */
+    height: 10em; /* Altura máxima de 10em */
+    margin-bottom: -1em; /* Mueve ligeramente la imagen hacia arriba para superponerse con el contenedor */
+    border-radius: 0px 60px 0px 50px;
+    display: block; /* Hace que la imagen sea un elemento de bloque */
+    object-fit: cover; /* Cubre el contenedor manteniendo la relación de aspecto */
+    transition: transform 0.3s ease; /* Transición suave en transformación */
+}
+
+/* Estilos adicionales de animación */
+
+.fases:hover {
+    transform: translateY(-5px); /* Desliza ligeramente hacia arriba al pasar el cursor */
+    box-shadow: 0 0 20px rgb(4, 4, 50); /* Añade una sombra al resaltar */
+    border-color: blue; /* Cambia el color del borde al resaltar */
+}
+
+.fases::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    animation: light 1s infinite alternate; /* Añade una animación de luz */
+}
+
+@keyframes light {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 50px rgba(0, 0, 255, 0.5);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    #fases-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        border-radius: 0px 10px 0px 10px;
+        margin: 5% 5%; /* Ajustar el margen lateral */
+    }
+
+    .fases {
+        width: calc(100% - 2em); /* Ancho completo con un pequeño margen en los lados */
+        margin: 1em 0; /* Ajustar el margen superior e inferior */
+        border-radius: 10px; /* Reducir el radio de borde */
+        height: auto; /* Altura automática para adaptarse al contenido */
+    }
+
+    .fases p {
+        transition: transform 0.3s ease; /* Transición suave */
+        padding: 1em; /* Ajustar el relleno */
+    }
+
+    #metodo {
+        margin: 20px; /* Ajustar el margen para el contenedor principal */
+        width: 100%; /* Ancho completo */
+    }
+
+    /* Estilos para el contenedor de fases en pantallas pequeñas */
+    #fases-container {
+        justify-content: center; /* Alinear los elementos al centro */
+        margin-top: 6em;
+        border-radius: 0px 80px 0px 80px;
+    }
+
+    /* Estilos para cada fase en pantallas pequeñas */
+    .fases {
+        width: 350px; /* Ancho ajustado para ocupar más espacio */
+        margin: 1em ; /* Margen superior e inferior automático, margen izquierdo y derecho automáticos */
+        border-radius: 0px 80px 0px 80px;
+    }
+}
+
+@media screen and (max-width: 438px) {
+
+    #fases-container {
+        
+        margin: 5% 5%; /* Reducir el margen en los lados */
+    }
+
+    .fases {
+        margin-top: 10px;
+        width: calc(100% - 2em); /* Ancho completo con un pequeño margen en los lados */
+        margin: 1em 0; /* Ajustar el margen superior e inferior */
+        border-radius: 10px; /* Reducir el radio de borde */
+        height: auto; /* Altura automática para adaptarse al contenido */
+    }
+
+    .fases img {
+        height: auto; /* Ajustar la altura automáticamente */
+        margin-bottom: 0; /* Eliminar el margen inferior para las imágenes */
+    }
+
+    .fases h2 {
+        font-size: 28px; /* Reducir el tamaño del título */
+    }
+
+    .fases h3 {
+        font-size: 15px; /* Reducir el tamaño del subtítulo */
+    }
+
+    .fases p {
+        font-size: 14px; /* Reducir el tamaño del texto */
+        padding: 1em; /* Ajustar el relleno */
+    }
+
+    #metodo {
+        margin: 20px; /* Ajustar el margen para el contenedor principal */
+        width: 100%; /* Ancho completo */
+    }
+}
+
+
+
+
+
+
+/*+++++++++++++++++++++perfil++++++++++*/
+.perfiltitulo h2 {  
+    font-size: 30px;
+    color: #333; /* Color del texto */
+    text-transform: uppercase; /* Convertir texto en mayúsculas */
+    position: relative; /* Posición relativa para alinear elementos hijos */
+    display: inline-block; /* Mostrar como bloque en línea */
+    margin-left: 8em;
+    margin-top: 5%;
+}
+
+/* Animación para cada letra */
+.perfiltitulo h2:hover {
+    animation: jump 0.5s infinite alternate; /* Aplica la animación */
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0); /* Inicialmente sin desplazamiento */
+    }
+    100% {
+        transform: translateY(-5px); /* Desplazamiento hacia arriba */
+    }
+}
+
+@media (max-width: 768px) {
+    .perfiltitulo h2 {
+        margin-top: 5%;
+        font-size: 24px;
+        margin-left: 3em;
+        text-align: center;
+    }
+    .perfiltitulo h2::after {
+        display: none; /* Eliminar el pseudo-elemento en pantallas pequeñas */
+    }
+    .perfiltitulo h2:hover {
+        animation: none; /* Eliminar la animación en pantallas pequeñas */
+    }
+}
+/*
+/*++++++++++++++++++++++++++++++++++++++++ perfil ++++++++++++++++++++++++++++++++++++++++++*/
+/* Estilos generales para la sección de mi perfil */
+#mi-perfil {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    margin: 1% 13% 5%; /* Espacio superior, margen izquierdo y derecho, espacio inferior */
+    max-width: 100%; /* Establece el ancho máximo */
+    word-wrap: break-word; /* Aplica el word-wrap para que las palabras largas se dividan automáticamente */
+    /* O puedes usar overflow-wrap: break-word; */
+    margin-top: 3%;
+}
+
+.perfil {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.descripcion {
+    margin-top: 10%;
+    margin-left: 20px; /* Espacio entre la foto y el texto */
+    flex-grow: 1; /* La descripción ocupa todo el espacio disponible */
+}
+
+.descripcion p {
+    text-align: justify;
+    margin: top 2em; ;
+    margin-bottom: 10px; /* Espacio entre los párrafos */
+}
+
+.descripcion a {
+    display: inline-block; /* Para que el enlace se comporte como bloque */
+    padding: 10px 20px; /* Añade relleno al botón */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 5px; /* Borde redondeado del botón */
+}
+
+/* Estilos para la imagen */
+.perfil img {
+    width: 200px; /* Ancho de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 5px; /* Borde redondeado de la imagen */
+     /* Sombra en 3D */
+    box-shadow: 0px 0px 40px rgb(17, 14, 14); /* Sombra */
+}
+
+.badge-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+}
+/* Media query para pantallas pequeñas */
+@media (max-width: 800px) {
+    #mi-perfil {
+        margin-top: 5%;
+        flex-direction: row; /* Mantén la dirección del flexbox en filas */
+        align-items: flex-start; /* Alinea los elementos al principio */
+        justify-content: center; /* Centra los elementos horizontalmente */
+        margin-left: 5%; /* Reducir el margen izquierdo */
+        margin-right: 5%; /* Reducir el margen derecho */
+    }
+
+    .perfil {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        align-content: flex-end;
+        flex-direction: column; /* Espacio inferior entre la foto y el texto */
+    }
+
+    .descripcion {
+        margin-top: 5%;
+        flex: 1; /* Haz que ocupe todo el espacio disponible */
+        margin-left: 20px; /* Agregar un margen a la izquierda del texto */
+        text-align: justify; /* Alinea el texto justificado */
+    }
+
+    .descripcion p {
+        margin-top: 1em; /* Espacio superior entre los párrafos */
+        margin-bottom: 1em; /* Espacio inferior entre los párrafos */
+    }
+
+    .perfil img {
+        width: 150px; /* Reducir el ancho de la imagen */
+        margin-right: 20px; /* Agregar un margen a la derecha de la imagen */
+        box-shadow: 10px 25px 10px rgb(17, 14, 14); /* Sombra */
+    }
+}
